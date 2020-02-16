@@ -40,7 +40,23 @@ public interface UserManager {
 	 * @throws Exception
 	 */
 	public PageData findByUsername(PageData pd)throws Exception;
-	
+
+	/**
+	* @description 根据手机号查用户
+	* @params [pd]
+	* @return  com.fh.util.PageData
+	* @author  sd
+	* @date  2020/2/16 13:14
+	**/
+	public PageData findByPhone(PageData pd) throws Exception;
+
+	/***
+	 * 修改用户密码
+	 * @param pd
+	 * @throws Exception
+	 */
+	public void changePassword(PageData pd) throws Exception;
+
 	/**列出某角色下的所有用户
 	 * @param pd
 	 * @return

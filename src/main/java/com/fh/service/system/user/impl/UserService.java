@@ -58,7 +58,31 @@ public class UserService implements UserManager{
 	public PageData findByUsername(PageData pd)throws Exception{
 		return (PageData)dao.findForObject("UserMapper.findByUsername", pd);
 	}
-	
+
+	/**
+	* @description 通过手机号获取数据
+	* @params [pd]
+	* @return  com.fh.util.PageData
+	* @author  sd
+	* @date  2020/2/16 13:17
+	**/
+	@Override
+	public PageData findByPhone(PageData pd) throws Exception {
+		return (PageData)dao.findForObject("UserMapper.findByPhone", pd);
+	}
+
+	/**
+	* @description 修改用户密码
+	* @params [pd]
+	* @return  void
+	* @author  sd
+	* @date  2020/2/16 17:26
+	**/
+	@Override
+	public void changePassword(PageData pd) throws Exception {
+		dao.update("UserMapper.changePassword",pd);
+	}
+
 	/**列出某角色下的所有用户
 	 * @param pd
 	 * @return

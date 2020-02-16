@@ -1,8 +1,6 @@
 package com.fh.controller.base;
 
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,6 +9,8 @@ import com.fh.entity.Page;
 import com.fh.util.Logger;
 import com.fh.util.PageData;
 import com.fh.util.UuidUtil;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author sudong
